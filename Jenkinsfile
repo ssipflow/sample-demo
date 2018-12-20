@@ -22,7 +22,7 @@ node {
     }
 
     stage('Archive') {
-        paralell (
+        parallel (
                 "Archive Artifacts" : {
                     archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true
                 },
