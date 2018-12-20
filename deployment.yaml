@@ -17,20 +17,20 @@ metadata:
   name: sample-demo
   labels:
     app: sample-demo
-  spec:
-    replicas: 1
-    selector:
-      matchLabels:
-        app: sample-demo
-      template:
-        metadata:
-          labels:
-            app: sample-demo
-            version: latest
-        spec:
-          containers:
-          - name: sample-demo
-            image: ssipflow/sample-demo:latest
-            ports:
-            - name: http
-              containerPort: 9090
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sample-demo
+    template:
+      metadata:
+        labels:
+          app: sample-demo
+          version: latest
+      spec:
+        containers:
+        - name: sample-demo
+          image: ssipflow/sample-demo:latest
+          ports:
+          - name: http
+            containerPort: 9090
