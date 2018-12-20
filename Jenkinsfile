@@ -23,13 +23,13 @@ node {
 
     stage('Archive') {
         paralell (
-            "Archive Artifacts" : {
-                archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true
-            },
-            "Docker Image Push" : {
-                buildImage.push("${commitHash}")
-                buildImage.push("latest")
-            }
+                "Archive Artifacts" : {
+                    archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true
+                },
+                "Docker Image Push" : {
+                    buildImage.push("${commitHash}")
+                    buildImage.push("latest")
+                }
         )
     }
 
