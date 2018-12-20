@@ -9,7 +9,7 @@ spec:
   ports:
     - protocol: TCP
       port: 9090
-      targetPort: 9090
+      targetPort: 9000
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
@@ -33,4 +33,4 @@ spec:
         image: ssipflow/sample-demo:latest
         ports:
         - name: http
-          containerPort: 9090
+          containerPort: 9000
