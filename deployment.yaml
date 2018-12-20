@@ -22,15 +22,15 @@ spec:
   selector:
     matchLabels:
       app: sample-demo
-    template:
-      metadata:
-        labels:
-          app: sample-demo
-          version: latest
-      spec:
-        containers:
-        - name: sample-demo
-          image: ssipflow/sample-demo:latest
-          ports:
-          - name: http
-            containerPort: 9090
+  template:
+    metadata:
+      labels:
+        app: sample-demo
+        version: latest
+    spec:
+      containers:
+      - name: sample-demo
+        image: ssipflow/sample-demo:latest
+        ports:
+        - name: http
+          containerPort: 9090
